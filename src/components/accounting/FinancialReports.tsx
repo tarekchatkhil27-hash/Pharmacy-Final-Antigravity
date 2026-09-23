@@ -197,6 +197,11 @@ export function FinancialReports({ onBack }: FinancialReportsProps) {
     setViewingReport(report.getData());
   };
 
+  const handleDownload = (report: any) => {
+    setViewingReport(report.getData());
+    // Auto print could be added here, but for now we just view
+  };
+
   const handlePrint = (report: ReportData) => {
     const printContent = document.getElementById('print-area');
     if (!printContent) return;
